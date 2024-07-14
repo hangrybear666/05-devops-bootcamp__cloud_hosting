@@ -6,8 +6,13 @@ This repo contains simple Bash Script files to establish an ssh connection to a 
 
 Pull the repository locally by running 
 ```
-  git clone 
+  git clone https://github.com/hangrybear666/05-devops-bootcamp__cloud_hosting.git 
 ```
 
 ## Usage
+
+1. Install Node and NPM with a newly created user account on remote server
+
+	To install node and npm via Node Version Manager (NVM) in a new service account on the remote machine simply run `./remote-install-node-npm.sh`.
+ 
 
