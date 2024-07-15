@@ -1,14 +1,14 @@
 #!/bin/bash
 
-REMOTE_ADDRESS=164.92.162.21
-INITIAL_USER="root"
-NEW_USER="node-runner"
+# load key value pairs from app.config
+source app.config
+
 PUBLIC_KEY=$(cat $HOME/.ssh/id_rsa.pub)
 
 # ask for user input to avoid password exposure in git
 read -p "Please provide password for new user $NEW_USER: " NEW_USER_PW
 
-ssh $INITIAL_USER@$REMOTE_ADDRESS <<EOF
+ssh $ROOT_USER@$REMOTE_ADDRESS <<EOF
 # reset prior user and the respective home folder
 userdel -r $NEW_USER
 
