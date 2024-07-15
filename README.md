@@ -29,4 +29,4 @@ Pull the repository locally by running
 
 5. To kill the running server check the logs from step 3 for its Process ID (PID).
 
-	To kill the node server, run `sudo kill <PID>` on the remote server.
+	To kill the node server, run `kill <PID>` on the remote server.
