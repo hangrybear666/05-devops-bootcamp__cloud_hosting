@@ -2,6 +2,10 @@
 
 This repo contains simple Bash Script files to establish an ssh connection to a cloud hosted linux virtual machine. After having established connection, some programs such as node are installed, a deployment package is copied via scp and then run on the remote machine.
 
+Two processes can be run in parallel:
+- A Java Tomcat Server with a React Frontend on Port 7071
+- A NodeJS Server serving static html on Port 3000
+
 ## Setup
 
 1. Pull SCM
