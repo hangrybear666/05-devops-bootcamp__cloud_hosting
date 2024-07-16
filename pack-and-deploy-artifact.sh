@@ -9,8 +9,16 @@ then
   exit 1
 fi
 
+# pull repo if not exists
+if [ ! -d cloud-basics-exercises/ ]
+then
+  git clone https://gitlab.com/twn-devops-bootcamp/latest/05-cloud/cloud-basics-exercises
+else
+  echo "Node project directory found."
+fi
+
 # package deployable
-cd app/
+cd cloud-basics-exercises/app/
 npm pack
 
 # check if file was created

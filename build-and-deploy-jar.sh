@@ -10,7 +10,7 @@ then
   exit 1
 fi
 
-# build java artifact 
+# pull repo if not exists 
 if [ ! -d java-react-example/ ]
 then
   git clone https://gitlab.com/twn-devops-bootcamp/latest/05-cloud/java-react-example
