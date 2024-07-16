@@ -29,6 +29,7 @@ then
 fi
 
 # copy file to remote
+echo "copying deployable to remote via scp."
 scp bootcamp-node-project-1.0.0.tgz $NEW_USER@$REMOTE_ADDRESS:bootcamp-node-project-1.0.0.tgz
 
 # Read User Input for service user pswd for later use
@@ -39,11 +40,15 @@ if [ ! -f bootcamp-node-project-1.0.0.tgz ]
 then
   echo "Packed file not found on remote. Something went wrong."
   exit 1
+else 
+  echo "Deployable Archive found on remote. unpacking, installing..."
 fi
 
 tar -xzvf bootcamp-node-project-1.0.0.tgz 
 cd package
+echo "installing packages..."
 npm install
+echo "starting the node server..."
 node server.js &
 
 # wait for the server to start before querying processes and netstats

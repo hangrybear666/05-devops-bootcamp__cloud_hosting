@@ -34,7 +34,7 @@ Pull the repository locally by running
 
 4. Build Artifact and Deploy remotely.
 
-	To build a .jar, push it to remote and start the server, run `./build-and-deploy-jar.sh`.
+	To build a .jar, push it to remote and start the server, run `./build-and-deploy-jar.sh`
 
 ## Usage (Exercises)
 
@@ -44,7 +44,7 @@ Pull the repository locally by running
 
 2. Install Node and NPM with a newly created user account on remote server
 
-	To install node and npm via Node Version Manager (NVM) in a new service account on the remote machine simply run `./remote-install-node-npm.sh`.
+	To install node and npm via Node Version Manager (NVM) in a new service account on the remote machine simply run `./remote-install-node-npm.sh`
  
 3. Install Node and NPM locally with Node Version Manager (NVM)
 
@@ -52,7 +52,7 @@ Pull the repository locally by running
 
 4. Package App and Upload to remote server, starting as a service in the background
 
-	To package the node app into an archive, upload it to the server via scp, unpack and start the server simply run `./pack-and-deploy-artifact.sh`.
+	To package the node app into an archive, upload it to the server via scp, unpack and start the server simply run `./pack-and-deploy-artifact.sh`
 
 5. To kill the running server check the logs from step 3 for its Process ID (PID).
 
