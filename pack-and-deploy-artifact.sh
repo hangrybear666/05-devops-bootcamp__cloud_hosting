@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# load key value pairs from app.config
-source app.config
+# load key value pairs from node.config
+source node.config
 
 if [ -z "$( which node )" ]
 then

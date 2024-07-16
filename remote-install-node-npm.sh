@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# load key value pairs from app.config
-source app.config
+# load key value pairs from node.config
+source node.config
 
 PUBLIC_KEY=$(cat $HOME/.ssh/id_rsa.pub)
 
@@ -20,7 +20,7 @@ sudo cat /etc/sudoers | grep $NEW_USER
 
 if [ -z "\$( sudo cat /etc/sudoers | grep $NEW_USER )" ]
 then
-  echo "node-runner ALL=(ALL:ALL) ALL" | sudo EDITOR="tee -a" visudo
+  echo "$NEW_USER ALL=(ALL:ALL) ALL" | sudo EDITOR="tee -a" visudo
   echo "$NEW_USER added to sudoers file."
 else 
   echo "$NEW_USER found in sudoers file."
